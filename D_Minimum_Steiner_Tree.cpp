@@ -2,16 +2,6 @@
 using namespace std;
 #define forloop(x,y) for(int i=x;i<y;i++)
 #define secondfor(x,y) for(int j=x;j<y;j++)
-#define print(x) cout << x << "\n";
-#define output(arr) for(int i=0;i<arr.size();i++){cout<<arr[i]<<" ";}
-#define asort(v) sort(v.begin(), v.end())
-#define dsort(v) sort(v.begin(), v.end(), greater<int>())
-#define intmax INT_MAX
-#define intmin INT_MIN
-#define intmax LLONG_MAX
-#define intmin LLONG_MIN
-#define mp(x,y) make_pair(x,y)
-
 void dfsfunction(int node,int par,vector<int>&depth,vector<int>&parent,vector<vector<int>>&adj){
     parent[node]=par;
     depth[node]=depth[par]+1;
@@ -73,7 +63,7 @@ void solution(){
     }
     forloop(0,m){int x;cin >> x;arr.push_back(x-1);}
     int ans=solvefunction(n,adj,arr);
-    print(ans)
+    cout << ans << "\n";
 
 }
 int main(){
